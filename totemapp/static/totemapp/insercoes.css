@@ -1,0 +1,373 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+       /* background: url('/_imagens/fundo1.jpeg') center center no-repeat fixed;
+        background-size: cover; /* Ajusta a imagem de fundo para cobrir toda a tela */
+        font-family: 'Montserrat', sans-serif;
+        height: auto;
+        overflow-x: hidden; /* Remove o scroll da página */
+    }
+
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Centraliza o conteúdo verticalmente */
+        box-sizing: border-box;
+    }
+
+    .logo-container {
+        width: 100%;
+        z-index: -100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2vh; /* Convertido de 20px para 2vh */
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        max-width: 30vh; /* Convertido de 230px para 23vh */
+        height: auto;
+    }
+
+    .btn_voltar {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-width: 2px;
+        border-bottom-width: 2px;
+        border-right-width: 2px;
+        border-left: none;
+        padding: 12px;
+        padding-left: 30px;
+        padding-right: 35px;
+        font-size: 24px;
+        margin-top: 2%;
+        color: white;
+        background-color: #E30613;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+        z-index: 10000;
+
+        .fas.fa-arrow-left {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    }
+
+    .btn_voltar:hover {
+        background-color: #C20511;
+        color: white;
+        cursor:pointer;
+    }
+
+    .btn_voltar i {
+        font-size: 1.8vh;
+        margin-right: 0.8vh;
+    }
+
+    .form-container {
+        z-index: 5;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border: 0.2vh solid rgb(0, 0, 0);
+        border-radius: 20px;
+        box-sizing: border-box;
+        max-width: 400px;
+        padding: 2vh;
+        box-shadow: 0 0 1.5vh rgba(255, 0, 0, 0.1);
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 30px;
+    }
+
+    input, select {
+        width: 350px;
+        padding: 10px; /* Convertido de 6px para 0.6vh */
+        margin: 7px 0;
+        border: 2px solid #E30613; /* Convertido de 1px para 0.1vh */
+        border-radius: 15px;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #ffffff;
+        font-size: 16px;
+    }
+
+    .text-area {
+    width: 350px;
+    padding: 10px;
+    margin: 7px 0;
+    border: 2px solid #E30613;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    resize: none;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+    .button-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .register-button {
+        background-color: rgb(209, 4, 4);
+        color: white;
+        border: 0.2vh solid rgb(0, 0, 0); /* Convertido de 2px para 0.2vh */
+        padding: 12px 50px; /* Convertido de 12px 50px para 1.2vh 5vh */
+        font-size: 2vh; /* Convertido de 20px para 2vh */
+        border-radius: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        transition: background-color 0.3s ease;
+    }
+
+    .register-button:hover {
+        background-color: #C20511;
+    }
+
+    .backgroundLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 450px;
+    z-index: -10;
+}
+
+    .backgroundRight {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 450px;
+        z-index: -10;
+
+    }
+
+/* Estilos do modal */
+.modal {
+    display: flex !important; /* Forçar o flexbox */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px; /* Ajustável conforme necessário */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.5s;
+}
+
+/* Transição suave ao abrir o modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Input do formulário */
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #E30613;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Botão de login */
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #E30613;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.modal-content button:hover {
+    background-color: #C20511;
+}
+
+/* Mensagem de erro */
+.modal-content p {
+    color: red;
+    font-size: 14px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-sucesso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.5s ease; /* Transição suave */
+}
+
+.container-modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: absolute; /* Mudamos para absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza tanto vertical quanto horizontal */
+}
+
+.container-modal p{
+    color: red;
+}
+
+#fecharModalSucesso {
+    color: white;
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 125px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #E30613;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#fecharModalSucesso:hover {
+        background-color: #C20511;
+}
+
+.valor-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#valor-prefixo {
+    margin-right: 5px;
+    color: #333; /* Cor do "R$" */
+}
+
+#valor-input {
+    padding-left: 0.5em; /* Espaço para evitar que o texto sobreponha o "R$" */
+}
+
+    .containerBotoes {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button-wrapper {
+      display: flex;
+      flex-direction: column;
+        text-decoration: none;
+      align-items: center;
+    }
+
+    .btn {
+      width: 200px;
+      height: 150px;
+      background-color: white;
+      color: #fff;
+      border: 2px solid black;
+      box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 40px;
+        text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn i {
+      font-size: 56px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .button-wrapper:hover{
+        transition: 0.3s ease-in-out;
+        transform: scale(1.1);
+        .btn i{
+            color: white;
+        }
+        .btn{
+            background-color: #E30613;
+        }
+    }
+
+
+
+
+
+
+
+    .ellipse {
+      margin-top: 15px;
+        margin-bottom: 25px;
+      background-color: #E30613;
+      font-weight: 500;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+      width: fit-content;
+        text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .ellipse:hover {
+      background-color: #C20511;
+    }
+
+
+}

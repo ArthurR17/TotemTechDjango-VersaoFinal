@@ -1,0 +1,143 @@
+/* Responsividade para iPad */
+@media (max-width: 1024px) and (min-width: 768px) {
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .background-image {
+    position: fixed; /* Mantém o fundo sempre visível */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* Garante que cubra toda a tela */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.8;
+    filter: saturate(150%) contrast(125%);
+}
+
+    .btn_voltar {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-width: 2px;
+        border-bottom-width: 2px;
+        border-right-width: 2px;
+        border-left: none;
+        padding: 12px;
+        padding-left: 30px;
+        padding-right: 35px;
+        font-size: 24px;
+        margin-top: 2%;
+        color: white;
+        background-color: #E30613;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+
+        .fas.fa-arrow-left {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    }
+
+    .btn_voltar:hover {
+        background-color: #C20511;
+        color: white;
+        cursor:pointer;
+    }
+
+    #titulo {
+        text-align: left;
+        color: #E30613;
+        font-size: 38px;
+        margin-top: 20px;
+        margin-left: 8%;
+    }
+
+    /* Primeira imagem ao lado direito do texto */
+    #sobre-container {
+        display: flex;
+        flex-direction: row-reverse; /* Altera a ordem para colocar a imagem à direita */
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 900px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    #lado {
+        width: 45%;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    #texto {
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-left: 10px;
+        width: 50%;
+        color: #333;
+    }
+
+    /* Banner centralizado */
+    .banner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    #banner {
+        width: 100%;
+        max-width: 800px;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Textos alinhados à esquerda */
+    #b {
+        text-align: justify;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #333;
+        max-width: 800px;
+        margin: 10px auto;
+        padding: 0 20px;
+    }
+
+    #info {
+        text-align: left;
+        font-size: 16px;
+        color: #333;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+    #info p {
+        margin-bottom: 10px;
+    }
+
+    #logo {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        width: 50%;
+    }
+
+    #logo img {
+        max-width: 200px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+
+
+}

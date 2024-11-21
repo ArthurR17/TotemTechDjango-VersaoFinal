@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mapa de Sala</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap">
+    <link rel="stylesheet" href="{% static 'totemapp/mapa_senai.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="{% static 'totemapp/images/logo.png' %}" type="image/x-icon">
+    <script src="{% static 'totemapp/js/temporizador.js' %}"></script>
+    <script>
+        var urlTelaInterativa = "{% url 'tela_inicial' %}"
+    </script>
+</head>
+<body>
+    <!-- Container do mapa -->
+    <div class="container-mapa">
+        <!-- Container de scroll para a imagem de fundo -->
+        <div class="scroll-container">
+            <!-- Imagem de fundo- -->
+            <div class="imagem-wrapper">
+                <img src="{% static 'totemapp/images/mapa.png' %}" alt="Imagem de fundo" class="imagem-acima">
+            </div>
+        </div>
+
+        <!-- Botão Voltar -->
+        <a href="{% url 'menu_opcoes' %}"><button class="btn_voltar"><i class="fas fa-arrow-left"></i>Voltar</button></a>
+
+        <!-- Botões de Controle -->
+        <div class="controles">
+            <button id="ponto-inicial" class="botao-controle"><i class="fa-solid fa-location-crosshairs"></i></button>
+            <button id="zoom-in" class="botao-controle"> <i class="fa-solid fa-plus"></i></button>
+            <button id="zoom-out" class="botao-controle"> <i class="fa-solid fa-minus"></i> </button>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <iframe id="modal-iframe" src="" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <!-- Botão Ver Mapa 3D -->
+        <div class="btn-mapa-3d-container">
+            <a href="https://maps.app.goo.gl/ePwd2eLW7ZVLUAQY8" id="open-modal" class="btn-mapa-3d" target="_blank">
+                <i class="fas fa-eye"></i> Ver Mapa 3D
+            </a>
+        </div>
+
+        <!-- Imagem no canto inferior esquerdo -->
+        <img src="{% static 'totemapp/images/lista2.png' %}" alt="Imagem no canto inferior esquerdo" class="imagem-canto-inferior">
+    </div>
+
+    <script src="{% static 'totemapp/js/mapa_senai.js' %}"></script>
+</body>
+</html>

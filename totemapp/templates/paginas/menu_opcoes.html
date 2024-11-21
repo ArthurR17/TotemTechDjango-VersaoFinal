@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela inicial</title>
+    <link rel="stylesheet" href="{% static 'totemapp/menu_opcoes.css' %}">
+    <link rel="stylesheet" href="{% static 'totemapp/feedback.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="{% static 'totemapp/images/logo.png' %}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="{% static 'totemapp/js/temporizador.js' %}"></script>
+    <script>
+        var urlTelaInterativa = "{% url 'tela_inicial' %}";
+    </script>
+</head>
+<body>
+<div class="background-image" style="background-image: url('{% static 'totemapp/images/fundo.png' %}');"></div>
+
+    <div class="image-container">
+        <img src="{% static 'totemapp/images/logo2.png' %}" alt="Imagem Descritiva">
+    </div>
+
+    <!-- Contêiner principal para a galeria -->
+    <div class="gallery-container">
+        <div class="gallery-slider">
+            <div class="slide"><img src="{% static 'totemapp/images/carrossel 1.jpg' %}" alt="Imagem 1"></div>
+            <div class="slide"><img src="{% static 'totemapp/images/carrossel 2.jpg' %}" alt="Imagem 2"></div>
+            <div class="slide"><img src="{% static 'totemapp/images/carrossel 3.jpg' %}" alt="Imagem 3"></div>
+            <div class="slide"><img src="{% static 'totemapp/images/carrossel 4.jpg' %}" alt="Imagem 4"></div>
+            <div class="slide"><img src="{% static 'totemapp/images/carrossel 5.jpg' %}" alt="Imagem 5"></div>
+            <div class="slide"><img src="{% static 'totemapp/images/carrossel 6.jpg' %}" alt="Imagem 6"></div>
+            <div class="slide"><img src="{% static 'totemapp/images/carrossel 7.jpg' %}" alt="Imagem 7"></div>
+            <div class="slide"><img src="{% static 'totemapp/images/carrossel 8.jpg' %}" alt="Imagem 8"></div>
+            <div class="slide"><img src="{% static 'totemapp/images/carrossel 9.jpg' %}" alt="Imagem 9"></div>
+            <div class="slide"><img src="{% static 'totemapp/images/carrossel 10.jpg' %}" alt="Imagem 10"></div>
+            <div class="slide"><img src="{% static 'totemapp/images/carrossel 11.jpg' %}" alt="Imagem 11"></div>
+            <div class="slide"><img src="{% static 'totemapp/images/carrossel 12.jpg' %}" alt="Imagem 12"></div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <div class="column">
+            <div class="button-wrapper">
+                <a href="{% url 'cursos' %}"><button class="my-button">
+                    <i class="fas fa-graduation-cap"></i>
+                </button>
+                <p class="button-title">CURSOS</p>
+                </a>
+            </div>
+            <div class="button-wrapper">
+                <a href="{% url 'insercoes' %}"><button class="my-button">
+                    <i class="fas fa-pen-to-square"></i>
+                </button>
+                <p class="button-title">INSERÇÕES</p>
+                </a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="button-wrapper">
+                <a href="{% url 'sobre_nos' %}"><button class="my-button">
+                    <i class="fa-solid fa-users"></i>
+                </button>
+                <p class="button-title">SOBRE NÓS</p>
+                </a>
+            </div>
+            <div class="button-wrapper">
+                <a href="{% url 'mapa_senai' %}">
+                    <button class="my-button">
+                        <i class="fas fa-map"></i>
+                    </button>
+                    <p class="button-title">MAPA SENAI</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal de Feedback -->
+<div id="feedback-modal" class="modal-feedback">
+    <div class="modal-content-feedback">
+        <button id="close-feedback-modal" class="close-modal-btn">&times;</button>
+        <h3>Como foi sua experiência?</h3>
+        <div class="feedback-options">
+            <span class="feedback-option" id="pessimo">😡</span>
+            <span class="feedback-option" id="ruim">😠</span>
+            <span class="feedback-option" id="neutro">😐</span>
+            <span class="feedback-option" id="bom">😊</span>
+            <span class="feedback-option" id="excelente">😍</span>
+        </div>
+        <div id="emoji-name" class="emoji-name"></div>
+        <input type="text" id="feedback-input" class="feedback-input" maxlength="450" placeholder="Dê suas sugestões ou feedbacks...">
+        <button id="submit-feedback" class="btn-submit-feedback">Enviar</button>
+        <div id="thank-you-message" class="thank-you-message"></div>
+    </div>
+</div>
+
+<button id="open-feedback-btn" class="btn-feedback">Feedback</button>
+
+<script src="{% static 'totemapp/js/feedback.js' %}"></script>
+
+
+</body>
+</html>

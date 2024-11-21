@@ -1,0 +1,1078 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+        }
+        /* Estilo para a div que será o fundo */
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('/_imagens/fundo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+            opacity: 0.7;
+            filter: saturate(150%) contrast(125%);
+        }
+
+    .btn_voltar {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-width: 2px;
+        border-bottom-width: 2px;
+        border-right-width: 2px;
+        border-left: none;
+        padding: 12px;
+        padding-left: 30px;
+        padding-right: 35px;
+        font-size: 24px;
+        top: 5%;
+        color: #E30613;
+        background-color: white;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+        position: fixed;
+
+        .fas.fa-arrow-left {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    }
+.btn_voltar:hover {
+    background-color: #C20511;
+    color: white;
+    cursor:pointer;
+}
+.menu_opcoes {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10%;
+}
+
+        .opcoes_item {
+            display: flex;
+            align-items: center;
+            margin-left: -5%;
+        }
+
+        .opcoes_item:hover {
+            cursor: pointer;
+        }
+
+        .opcoes_item i {
+            font-size: 24px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+
+
+        .caixa_select {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            margin-bottom: 7px;
+        }
+
+        .caixa_select:hover {
+            cursor: pointer;
+        }
+
+
+
+.localizar {
+    display: flex;
+    justify-content: center; /* Centraliza a barra de pesquisa */
+    margin-top: 30px; /* Ajuste conforme necessário */
+}
+
+.input-container {
+    position: relative;
+}
+
+#search {
+    border-radius: 25px; /* Arredondar os cantos */
+    border: 1px solid #ccc; /* Borda opcional */
+    padding: 10px 40px 10px 15px; /* Espaçamento interno (deixe espaço à esquerda para a lupa) */
+    width: 100%; /* Toma todo o espaço disponível */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    background-color: white; /* Fundo branco */
+    z-index: 1; /* Coloca o input acima */
+}
+
+.btn-lupa {
+    position: absolute; /* Posiciona a lupa dentro da barra */
+    right: 15px; /* Distância da direita */
+    top: 55%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste para centralizar */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.btn-lupa i {
+    font-size: 20px; /* Tamanho do ícone */
+    color: #333; /* Cor do ícone */
+}
+
+
+    .linha {
+        width: 85%;
+        height: 2px;
+        background-color: red;
+        margin-top: 2px;
+        margin-left: 7.5%;
+    }
+
+
+    .localizar form {
+        display: flex;
+        width: 100%;
+    }
+
+    .localizar input[type="text"] {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 8px;
+    }
+
+    .localizar .search-btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .localizar .search-btn i {
+        font-size: 16px;
+    }
+
+
+        .separator {
+            height: 25px;
+            width: 1px;
+            background-color: #ccc;
+            margin: 0 10px;
+        }
+
+        .localizar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 25px;
+            font-weight: 500;
+        }
+
+        .localizar button {
+            background: none;
+            border: none;
+            color: #000;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .localizar button i {
+            font-size: 18px;
+        }
+
+        .cartoes_container, .cursos_container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px; /* Espaçamento entre os cartões */
+            padding-left: 120px; /* Espaçamento à esquerda do grid */
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+
+         .cartoes {
+        background-color: white;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+             word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .cartoes2 {
+        background-color: white;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 5%;
+    }
+
+        .tags_cartoes {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tags_cartoes span {
+            background-color: white;
+            padding: 5px 10px 5px 5px;
+            border-radius: 20px;
+            font-size: 12px;
+            border: 1px solid #878787;
+        }
+
+        .categoria {
+            margin: 10px 0;
+        }
+
+        .categoria span {
+            background-color: white;
+            padding: 5px 10px 5px 5px;
+            border-radius: 20px;
+            font-size: 12px;
+            border: 1px solid #878787;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #333;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        p {
+            margin-top: 0px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .info {
+            font-size: 16px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .info i {
+            margin-right: 5px;
+            font-size: 20px;
+        }
+
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .botao {
+            padding: 7px;
+            width: 225px;
+            border-radius: 20px;
+            font-weight: bolder;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.3s;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0 auto;
+        }
+
+        .saiba-mais {
+            background-color: white;
+            border: 1px solid #e30613;
+            color: red;
+        }
+
+        .interessado {
+            background-color: #e30613;
+            color: white;
+            border: 1px solid black;
+        }
+
+        .interessado:hover {
+            transition: 0.3s;
+            background-color: #9a1915
+        }
+
+        .saiba-mais:hover {
+            background-color: #9a1915;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .interessado i {
+            margin-left: 8px;
+            font-size: 22px;
+            position: absolute;
+        }
+
+        /* Modal */
+
+        .modal {
+            visibility: hidden;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.open {
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+
+
+        /* Estilos para o container externo e interno */
+        .modal-outer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-height: 90vh; /* Limita a altura máxima do modal */
+            font-family: 'Montserrat', sans-serif;
+            width: 800px;
+
+        }
+
+        .modal-inner-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid #828282;
+            max-width: 800px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
+
+        }
+
+        .modal-fundo {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 20px;
+            width: 800px;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            transform-origin: center;
+            max-height: 90vh; /* Limita a altura máxima do modal */
+            overflow-y: auto;
+            overflow-x: hidden;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Estilos do título */
+        #modal-titulo {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        #modal-titulo2 {
+            margin-bottom: 10px;
+            font-size: 19px;
+
+        }
+
+
+        #modal-descricao {
+            font-size: 18px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Estilos da descrição */
+        p {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        #modal-carga {
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        /* Botão de fechar */
+        .close {
+            color: #E30613;
+            font-size: 30px;
+            top: 7px;
+            right: 13px;
+            cursor: pointer;
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+
+        }
+
+        #modal-close {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #E30613;
+            border: 1px solid black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 20px;
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            margin-left: auto;
+            margin-bottom: 0;
+        }
+
+        #modal-close:hover {
+            background-color: #C20511;
+        }
+
+        /* Botão de acordeão */
+        .btn_acordeao {
+            background-color: #F5F5F5;
+            color: #333;
+            cursor: pointer;
+            padding: 12px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn_acordeao .arrow {
+            font-size: 16px;
+            color: #E30613; /* Cor vermelha para as setas */
+        }
+
+        /* Conteúdo do acordeão */
+        .content_acordeao {
+            display: none;
+            background-color: white;
+            padding: 0 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+
+        .content_acordeao ul {
+            padding-left: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .content_acordeao li {
+            margin: 5px 0;
+            color: #666;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .linha-cima {
+            height: 2px;
+            background-color: #ddd;
+            width: 100%;
+            bottom: 0;
+            margin-bottom: 15px;
+        }
+
+        .linha-baixo {
+            height: 2px;
+            background-color: #ddd;
+            width: 100%;
+            bottom: 0;
+            margin-top: 20px;
+        }
+
+        .linha-container {
+            position: relative;
+            width: calc(105.8%);
+            margin-left: -20px;
+        }
+
+        .botoes-footer {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .paginas {
+            margin-top: 10px;
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .link {
+            border: 1px solid #E30613;
+            padding: 5px 10px 5px 10px;
+            margin-left: 10px;
+            text-decoration:none;
+            color: #E30613;
+            font-weight: 500;
+        }
+        .link-selecionado {
+            border: 1px solid #E30613;
+            padding: 5px 10px 5px 10px;
+            margin-left: 10px;
+            text-decoration:none;
+            color: white;
+            font-weight: 500;
+            background-color: #E30613;
+        }
+
+        .link:hover {
+            background-color: #C20511;
+            color: white;
+        }
+
+    }
+
+
+        #flush-collapseOne {
+        background-color: #F4F4F4;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        }
+
+        #flush-collapseTwo {
+        background-color: #F4F4F4;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        }
+
+
+        .accordion-button {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        /* Cria a barra vermelha usando o pseudo-elemento ::before */
+        .accordion-item::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 25%;
+            width: 7px;
+            background-color: #E30613;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            transition: height 0.3s ease;
+            height: 50%;
+            z-index: 1000;
+        }
+
+        .accordion-item {
+            border: none;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .accordion-collapse {
+            padding-left: 20px;
+        }
+
+        .accordion-body {
+            padding-left: 20px;
+        }
+
+
+        .accordion-item2 {
+            border: none;
+            margin-top: 10px;
+        }
+
+        .accordion-button:focus,
+        .accordion-button:not(.collapsed) {
+            box-shadow: none;
+            background-color: #F4F4F4;;
+            font-weight: bold;
+            color: black;
+
+        }
+
+        .accordion-button.collapsed {
+            font-weight: bold;
+
+        }
+
+        .accordion-body {
+            padding: 0.5rem 0.5rem 0.5rem;
+            padding-top: 0;
+
+        }
+
+        .accordion-body ul li {
+            margin-bottom: 0.25rem;
+
+        }
+
+        .accordion-flush>.accordion-item>.accordion-header .accordion-button, .accordion-flush>.accordion-item>.accordion-header .accordion-button.collapsed {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: #F4F4F4;
+        }
+
+
+        /* Modal Interessado */
+
+        .modal-interessado  {
+            visibility: hidden;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-interessado .modal-inner-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid #828282;
+            width: 600px;
+            max-height: none;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .modal-interessado .modal-outer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form label {
+            align-self: flex-start;
+            margin-left: 25%;
+            width: 50%;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        form input {
+            width: 50%;
+            border-radius: 10px;
+            margin-top: 3px;
+            border: 2px solid #E30613;
+            padding: 4px;
+        }
+
+        .modal-interessado button {
+            margin-top: 15px;
+            background-color: #E30613;
+            border: 1px solid #E30613;
+            border-radius: 30px;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+            padding: 5px;
+            width: 150px;
+        }
+
+
+
+        .modal-interessado .close {
+            color: #E30613;
+            font-size: 28px;
+            top: 10px;
+            right: 25px;
+            cursor: pointer;
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+        }
+
+        .modal .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 400px;
+            position: relative;
+        }
+
+        .modal h2 {
+            margin: 0px;
+            font-size: 24px;
+            color: #333;
+        }
+
+
+
+        .modal p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .modal .close-modal {
+            color: #E30613;
+            font-size: 28px;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+        }
+
+        .menu_opcoes button {
+            background-color: transparent;
+            border: none;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .menu_opcoes button:hover {
+            background-color: transparent;
+            color: black;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .menu_opcoes h4 {
+            color: black;
+            font-weight: bold;
+        }
+
+
+
+        .opcoes_item2 label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 7px;
+        }
+
+        .opcoes_item2 h4 {
+            margin-left: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+        }
+
+        .opcoes_item2:hover {
+            cursor: pointer;
+        }
+
+        .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+            color: black;
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        .dropdown-menu {
+            height: 0; /* Altura inicial */
+            overflow: hidden; /* Esconde o conteúdo */
+            transition: height 0.3s ease; /* Transição suave para a altura */
+        }
+
+
+        .dropdown-menu.show {
+            height: auto; /* Permite a altura automática */
+        }
+
+        /* Adicionando uma classe adicional para definir a altura máxima do dropdown */
+        .dropdown-menu.show.open {
+            height: 200px; /* Defina a altura máxima desejada */
+        }
+
+
+
+        .search-input {
+            background-color: transparent; /* Ou qualquer outra cor que você preferir */
+            border: 1px solid #ccc; /* Ajuste a cor e o estilo da borda conforme necessário */
+            outline: none; /* Remove o contorno ao focar no campo */
+        }
+
+        .aviso_curso {
+            text-align: center;
+            margin-top: 10%;
+            color: #C20511;
+            font-size: 32px;
+        }
+
+
+        /* Adicionando variáveis de cores para maior consistência */
+        :root {
+            --main-color: #E30613;
+            --secondary-color: #C20511;
+            --button-bg-color: #007bff;
+            --hover-bg-color: #9a1915;
+            --border-color: #878787;
+        }
+
+            /* Personalizando o botão do calendário */
+    .flatpickr-calendar {
+        border: 2px solid #C20511; /* Cor da borda */
+        border-radius: 10px; /* Bordas arredondadas */
+        background-color: #FFFFFF; /* Cor de fundo */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
+        overflow: hidden; /* Para garantir que as bordas arredondadas funcionem */
+    }
+
+    /* Estilizando o cabeçalho do calendário */
+        .flatpickr-header {
+        background-color: #E30613; /* Cor de fundo do cabeçalho */
+        color: #FFFFFF; /* Cor do texto do cabeçalho */
+        border-bottom: 2px solid #C20511; /* Borda inferior */
+        padding: 10px; /* Espaçamento interno */
+        display: flex; /* Flex para alinhar os elementos */
+        justify-content: space-between; /* Espaçamento entre os elementos */
+        align-items: center; /* Alinhamento vertical */
+    }
+
+    /* Alterando a cor do dia selecionado */
+    .flatpickr-day.selected {
+        background-color: #C20511; /* Cor de fundo do dia selecionado */
+        color: #FFFFFF; /* Cor do texto do dia selecionado */
+        border-color: #C20511;
+        border-radius: 50%; /* Bordas arredondadas para o dia selecionado */
+    }
+
+    /* Alterando a cor do dia atual */
+    .flatpickr-day.today {
+        background-color: #E30613; /* Cor de fundo do dia atual */
+        color: #FFFFFF; /* Cor do texto do dia atual */
+        border-color: #C20511;
+    }
+
+
+    /* Estilizando os dias do mês */
+    .flatpickr-day {
+        border-radius: 10px; /* Bordas arredondadas para os dias */
+        color: #000000; /* Cor do texto dos dias */
+        transition: background-color 0.2s, color 0.2s; /* Transição suave */
+    }
+
+    /* Alterando a cor dos dias quando o mouse passa por cima */
+    .flatpickr-day:hover {
+        background-color: #C20511; /* Cor ao passar o mouse */
+        color: #FFFFFF; /* Cor do texto ao passar o mouse */
+    }
+
+    /* Alterando a cor dos dias desabilitados */
+    .flatpickr-day.disabled {
+        color: #D9D9D9; /* Cor dos dias desabilitados */
+        background-color: transparent; /* Fundo transparente */
+    }
+
+    /* Estilizando o botão de mudar mês */
+    .flatpickr-prev-month,
+    .flatpickr-next-month {
+        color: #E30613; /* Cor dos botões de mês */
+    }
+
+    /* Estilizando o botão de fechamento do calendário */
+    .flatpickr-close {
+        color: #E30613; /* Cor do botão de fechamento */
+    }
+
+    /* Estilizando o input de data */
+    #id_data_nascimento, .flatpickr-input {
+        border: 2px solid #C20511; /* Borda do input */
+        border-radius: 10px; /* Bordas arredondadas */
+        padding: 10px; /* Espaçamento interno */
+        font-size: 16px; /* Tamanho da fonte */
+        color: #000000; /* Cor do texto do input */
+    }
+
+    /* Ajustando o estilo do placeholder */
+    #id_data_nascimento::placeholder, .flatpickr-input::placeholder {
+        color: black; /* Cor do placeholder */
+    }
+
+    /* Estilizando a classe de erro */
+    .error {
+        color: #C20511; /* Cor dos textos de erro */
+        font-size: 14px; /* Tamanho da fonte para erros */
+        margin-top: 5px; /* Margem superior */
+    }
+
+    .flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay {
+        background-color: #C20511;
+    }
+
+    .form-control {
+    display: block;
+    width: 50%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    border: 2px solid #E30613;
+    border-radius: 10px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+    /* CSS para o modal */
+    .modal-nova {
+        display: none; /* Escondido por padrão */
+        position: fixed;
+        z-index: 1000; /* Coloca o modal acima de outros elementos */
+        left: 0;
+        top: 0;
+        width: 100%; /* 100% da largura */
+        height: 100%; /* 100% da altura */
+        background-color: rgba(0, 0, 0, 0.6); /* Fundo preto com opacidade */
+    }
+
+    .modal-conteudo-novo {
+        background-color: #ffffff;
+        margin: auto; /* Centraliza o modal */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px; /* Largura do modal ajustada */
+        border-radius: 12px; /* Bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do modal */
+        animation: fadeIn 0.5s; /* Animação ao aparecer */
+        position: relative; /* Necessário para o botão de fechar */
+        top: 50%; /* Centraliza verticalmente */
+        transform: translateY(-50%); /* Ajusta a posição para centralizar */
+    }
+
+    /* Animação de fade in */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .titulo-modal-novo {
+        color: #E30613; /* Cor do título */
+        margin: 0; /* Remove margens */
+        font-size: 24px; /* Tamanho da fonte do título */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .mensagem-modal-nova {
+        color: #000000; /* Cor da mensagem */
+        margin: 10px 0; /* Margens acima e abaixo da mensagem */
+        text-align: center; /* Centraliza o texto */
+        font-size: 16px;
+    }
+
+    .fechar-modal-novo {
+        color: #E30613;
+        position: absolute; /* Posiciona o botão de fechar */
+        top: 5px; /* Distância do topo */
+        right: 15px; /* Distância da direita */
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .fechar-modal-novo:hover,
+    .fechar-modal-novo:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Estilo da linha horizontal */
+    hr {
+        border: none; /* Remove borda padrão */
+        height: 1px; /* Altura da linha */
+        background-color: #E30613; /* Cor da linha */
+        margin: 10px 0; /* Margens acima e abaixo da linha */
+    }
+
+    .selected {
+        background-color: #004AAD; /* Cor de fundo do item selecionado */
+        color: #FFFFFF; /* Cor do texto do item selecionado */
+    }

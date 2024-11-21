@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'totemapp/trilha_auto.css' %}">
+    <link rel="icon" href="{% static 'totemapp/images/logo.png' %}" type="image/x-icon">
+    <script src="{% static 'totemapp/js/temporizador.js' %}"></script>
+    <title>Trilha Automobilística</title>
+    <script>
+        var urlTelaInterativa = "{% url 'tela_inicial' %}"
+    </script>
+</head>
+<body>
+
+    <a href="{% url 'cursos' %}"><button class="btn_voltar"><i class="fas fa-arrow-left"></i>Voltar</button></a>
+    <div class="container">
+        <h1>TRILHA DE CURSO AUTOMOBILÍSTICA</h1>
+        <div class="line"></div>
+    </div>
+    <img id="trilha" src="{% static 'totemapp/images/auto.svg' %}" alt="trilha">
+
+    <!-- Container para os botões de zoom -->
+    <div class="zoom-controls">
+        <button onclick="zoomIn()">+</button>
+        <button onclick="zoomOut()">-</button>
+        <button onclick="resetZoom()">⦿</button>
+    </div>
+
+    <!-- Container sobre -->
+    <div class="sobre-container" style="display: none;">
+        <h2 style="color: #E30613; font-weight: bold;">Sobre essa Trilha</h2>
+        <p style="color: rgb(0, 0, 0);">A trilha de curso automobilística oferece uma formação abrangente sobre os principais sistemas de veículos, abordando mecânica, eletrônica automotiva e segurança. O curso capacita profissionais para diagnosticar, reparar e manter veículos modernos, utilizando ferramentas e técnicas atualizadas. Ideal para quem busca ingressar ou se especializar</p>
+    </div>
+
+    <!-- Botão para abrir o "Sobre" -->
+    <button class="btn_sobre" onclick="toggleSobre()">Sobre essa trilha</button>
+
+    <footer>
+        <img id="logo" src="{% static 'totemapp/images/logo2.png' %}" alt="Logo">
+    </footer>
+
+    <script src="{% static 'totemapp/js/trilha_auto.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+/* Reset para remover padding e margens */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilização: corpo da página */
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* Para contraste com a imagem de fundo */
+    overflow-y: auto;
+}
+
+
+/* Estilização: contêiner da logo */
+.logo-container {
+    text-align: center;
+}
+
+
+/* Estilização: imagem da logo */
+.logo-container img {
+    max-width: 100%; /* Garante que a logo não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da logo */
+}
+
+
+/* Estilização: contêiner da imagem acima dos botões */
+.image-above-buttons {
+    text-align: center;
+    margin-bottom: 2vw; /* Espaçamento abaixo da imagem */
+}
+
+
+.image-above-buttons img {
+    max-width: 80vw; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+/* Estilização: contêiner da imagem no topo */
+.image-container {
+    text-align: center;
+    margin-bottom: 1vw; /* Espaçamento abaixo da logo */
+    margin-top: 63%; /* Espaçamento acima da logo */
+}
+
+
+.image-container img {
+    max-width: 90vw; /* Largura máxima da imagem responsiva */
+    height: auto; /* Mantém a proporção da imagem */
+
+}
+
+/* Contêiner da galeria */
+.gallery-container {
+    width: 100%;
+    max-width: 90vw;
+    overflow: hidden;
+    position: absolute; /* Posicionamento absoluto para fixar no topo */
+    top: 0; /* Posiciona no topo da tela */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Para centralização precisa */
+    margin-top: 3%; /* Espaçamento acima do carrossel */
+    border-radius: 1.5vw;
+}
+
+
+/* Estilo para o contêiner que contém todas as imagens */
+.gallery-slider {
+    display: flex;
+    width: 1960%; /* Tamanho do containêr, dependente dele para mostrar todas as imagens. */
+    animation: slide 200s linear infinite; /* Duração do carrossel */
+}
+
+
+/* Estilização: imagens da galeria */
+.slide img {
+    border: 7px solid #ffffff;
+    width: 1000px; /* Define a largura fixa */
+    height: 560px; /* Define a altura fixa */
+    display: block;
+    object-fit: cover; /* Imagens se ajustem sem distorção */
+}
+
+
+
+
+
+
+/* Animação para deslizar as imagens automaticamente */
+/* TRANSLATEX: um elemento ao longo do eixo horizontal*/
+/* controla em horizontal, define a animação como um slide, representa seus estados.*/
+/* 0% está parada, 25% do tempo da animação ele se movera conforme a largura emposta
+ou seja (-100%) faz com que se mova para a esquerda. */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+
+    .gallery-container {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+/* Contêiner principal dos botões */
+.button-container {
+    flex-grow: 1;
+    display: flex;
+    gap: 12vw; /* Espaço entre os botões */
+    justify-content: center; /* Centraliza as colunas horizontalmente */
+    margin-top: 1vh; /* Espaço acima dos botões */
+    color: #ff0400;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+
+/* Estilização: Para cada bloco de botão e título */
+.button-wrapper {
+    text-align: center;
+    margin-bottom: 5%;
+    margin: 1vw;
+    transition: transform 0.3s ease;
+
+}
+
+.button-wrapper:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+
+
+/* Estilo dos botões */
+.my-button {
+    width: 16vw; /* Largura do botão (responsiva) em relação à largura viewport */
+    height: 21vh; /* Altura do botão (responsiva) em relação à altura viewport */
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 2vw; /* Bordas mais arredondadas (viewport width) */
+    border: 2px solid #000000; /* Adiciona uma borda, cor preta */
+    font-size: 20px; /* Tamanho da fonte (responsivo) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:  50%; /* Espaço entre o botão e o título */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Estilizacão: ícones dentro dos botões */
+.my-button i {
+    font-size: 5vw; /* Tamanho do ícone (responsivo) */
+}
+
+
+p {
+    display: flex;
+    justify-content: center;  /* Centraliza o texto horizontalmente */
+}
+
+
+/* Estilização: Títulos abaixo dos botões */
+.button-title {
+    align-items: center;
+    font-size: 20px; /* Tamanho da fonte do título */
+    color: #ffffff;
+    margin-top: 1vw; /* Espaçamento de uma linha, titulo e botão */
+    font-weight: bold;
+    background-color: #E30613;
+    border-radius: 80vw;
+    height: 4vh;
+}
+
+
+/* Efeito, hover nos botões, muda a cor ao passar encima */
+.my-button:hover {
+    background-color: #E30613; /* Cor mais escura ao passar o mouse */
+    color: #ffffff;
+    transition: 0.2s;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.background-image {
+    position: fixed; /* Mantém o fundo sempre visível */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* Garante que cubra toda a tela */
+    background-image: url('/static/totemapp/images/fundo.png');
+    background-size: cover;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    z-index: -1; /* Fica atrás de todo o conteúdo */
+    opacity: 0.8;
+    filter: saturate(150%) contrast(125%);
+}
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .my-button {
+        width: 80vw; /* Aumenta a largura dos botões em telas menores */
+        height: 10vh; /* Aumenta a altura dos botões em telas menores */
+        font-size: 1.2em; /* Ajusta o tamanho da fonte para telas pequenas */
+    }
+
+
+    .button-title {
+        font-size: 1em; /* Ajusta o tamanho dos títulos em telas pequenas */
+    }
+
+
+    .gallery-container {
+        max-width: 100%;
+    }
+}

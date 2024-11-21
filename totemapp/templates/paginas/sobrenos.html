@@ -1,0 +1,76 @@
+<html>
+    <head>
+        {% load static %}
+        <title>Sobre nós</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'totemapp/sobre_nos.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="{% static 'totemapp/js/temporizador.js' %}"></script>
+        <script>
+            var urlTelaInterativa = "{% url 'tela_inicial' %}"
+        </script>
+    </head>
+<body>
+        <div class="background-image" style="background-image: url('{% static 'totemapp/images/fundo3.png' %}');"></div>
+
+
+        <a href="{% url 'menu_opcoes' %}"><button class="btn_voltar"><i class="fas fa-arrow-left"></i>Voltar</button></a>
+        <br>
+        <br>
+        <h1 id="titulo">Sobre Nós</h1>
+        <div id="sobre-container">
+            <img id="lado" src="{% static 'totemapp/images/IMG_3328.jpg' %}">
+            <p id="texto">Com mais de 80 anos de atuação, o SENAI-SP supera 1 milhão de matrículas anuais, abrangendo desde cursos para a qualificação básica até a pós-graduação.
+             São 90 unidades de formação profissional distribuídas em todo o estado de São Paulo, incluindo a escola SENAI Antonio Devisate,
+             localizada na cidade de São José do Rio Preto.  instituição oferece soluções em inovação e tecnologia, atuando nas mais diversas áreas de competência, como alimentos e bebidas, biotecnologia, energias renováveis, manufatura avançada e logística, reunindo profissionais qualificados e infraestruturas tecnológicas, como o Centro de Conectividade, o Laboratório de CyberSegurança, e o OpenLab da Indústria 4.0. </p>
+
+        </div>
+        <br>
+
+    <div class="banner-container">
+        <img id="banner" src="{% static 'totemapp/images/conhecersenai.png' %}" alt="Banner">
+    </div>
+    <br>
+    <br>
+    <br>
+        <p id="b">Oferecemos cursos para as qualificações de automobilística, elétrica e eletrônica, gestão, metalmecânica, TI - tecnologia da informação em um ambiente de ensino projetado para oferecer capacitação profissional e especialização técnica. Contamos com laboratórios de automação residencial, CAD, CLP, CAM, eletroeletrônica, eletromecânica, hidráulica e pneumática, máquinas e comando elétricos, medição dimensional, tecnologia automotiva e tecnologia da informação e oficinas de automobilística, eletricidade residencial, usinagem convencional e à CNC e solda. Contamos com cursos gratuitos de aprendizagem e técnicos.</p>
+
+        <div id="info">
+            <p><strong>Missão:</strong></p>
+            <p>Promover o desenvolvimento sustentável do país, elevando a competitividade da indústria, por meio da educação profissional e da inovação e tecnologia.</p>
+
+            <p><strong>Visão:</strong></p>
+            <p>Ser reconhecido pela oferta de formação profissional de padrão global.</p>
+            <p>Ser reconhecido como indutor da inovação e da tecnologia para a competitividade da indústria.</p>
+            <p>Distinguir-se pela excelência dos seus serviços e dos seus processos.</p>
+
+            <p><strong>Nossos Compromissos:</strong></p>
+            <ol>
+                <p>1. Formação para oportunidades reais de trabalho.</p>
+                <p>2. Compromisso com o sucesso dos indivíduos e das empresas.</p>
+                <p>3. Ampliação das oportunidades de acesso aos nossos serviços.</p>
+                <p>4. Meritocracia baseada em oportunidades iguais para todos.</p>
+                <p>5. Liderança estratégica e responsável, influenciando positivamente todas as partes interessadas.</p>
+                <p>6. Resultados crescentes e sustentabilidade. Respeitamos o direito das futuras gerações a um mundo melhor.</p>
+            </ol>
+
+            <p><strong>Nossos Valores:</strong></p>
+            <ol>
+                <p>1. Credibilidade e Integridade: atitudes pautadas na transparência e confiança. Respeitamos os princípios da justiça e da verdade.</p>
+                <p>2. Compromisso e Disciplina: trabalhamos de maneira organizada, empenhados com o alcance dos nossos objetivos.</p>
+                <p>3. Diversidade e Inclusão: é a soma das diferenças que promove enriquecimento cultural e estímulo à criatividade e à flexibilidade.</p>
+                <p>4. Excelência e Inovação: incentivamos a geração de ideias que renovem e revolucionem serviços, processos e estratégias.</p>
+                <p>5. Agilidade e Responsabilidade: desejamos respostas rápidas, eficazes, sustentáveis e consequentes.</p>
+                <p>6. Valorização e Reconhecimento: estimulamos nossas pessoas, valorizando o “trabalho bem feito” e colaborativo.</p>
+            </ol>
+        </div>
+    </body>
+
+    <br>
+        <div>
+            <img id="logo" src="{% static 'totemapp/images/logo2.png' %}" alt="Logo SENAI">
+        </div>
+</body>
+</html>

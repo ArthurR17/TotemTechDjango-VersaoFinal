@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tela interativa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'totemapp/images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'totemapp/tela_inicial.css' %}">
+</head>
+
+<body class="background">
+    <div class="backgroundLeft">
+        <img src="{% static 'totemapp/images/background-left.svg' %}" alt="background_esquerda">
+    </div>
+
+    <div class="backgroundRight">
+        <img src="{% static 'totemapp/images/background-right.svg' %}" alt="background_direita">
+    </div>
+
+
+    <a href="{% url 'menu_opcoes' %}" class="full-link">
+        <div class="container">
+            <img src="{% static 'totemapp/images/logo.png' %}" alt="Logo" class="logo">
+            <h1>Pressione para acessar</h1>
+        </div>
+    </a>
+
+</body>
+</html>

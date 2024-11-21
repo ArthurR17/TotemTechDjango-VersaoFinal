@@ -1,0 +1,173 @@
+/* Estilo do Modal */
+.modal-feedback {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content-feedback {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 329px;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.feedback-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.feedback-option {
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.feedback-option {
+font-size: 40px;
+cursor: pointer;
+transition: transform 0.2s ease;
+}
+
+
+.feedback-option:hover {
+transform: scale(1.5); /* Aumenta ao passar o mouse */
+}
+
+.feedback-option.selected {
+transform: scale(1.5); /* Aumenta o emoji selecionado */
+}
+
+.feedback-option:not(.selected) {
+transform: scale(0.7); /* Diminui os emojis não selecionados */
+}
+
+
+.feedback-input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.feedback-input::placeholder {
+    color: #999;
+    white-space: nowrap;
+}
+
+.feedback-input:focus {
+    border-color: #E30613;
+}
+
+.btn-submit-feedback {
+    padding: 10px 20px;
+    background-color: #E30613;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-submit-feedback:hover {
+    background-color: #C20511;
+}
+
+.thank-you-message {
+    margin-top: 15px;
+    font-size: 16px;
+    color: green;
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.emoji-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+.btn-feedback {
+    position: relative;
+    background-color: #E30613;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 50px;
+    top: 20px;
+    font-size: 18px;
+}
+
+.btn-feedback:hover {
+    background-color: #C20511;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h3 {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+}
+
+    /* Botão para fechar o modal */
+.close-modal-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-modal-btn:hover {
+    color: red;
+}
+
+/* Ajuste na altura da caixa de texto */
+.feedback-input {
+    height: 50px; /* Aumenta a altura da caixa */
+    font-size: 14px;
+}

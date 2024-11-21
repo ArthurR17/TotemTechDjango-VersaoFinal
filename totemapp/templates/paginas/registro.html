@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registro de Curso</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static 'totemapp/registro.css' %}'>
+    <link rel="icon" href="{% static 'totemapp/images/logo.png' %}" type="image/x-icon">
+    <script src="{% static 'totemapp/js/temporizador.js' %}"></script>
+    <script>
+        var urlTelaInterativa = "{% url 'tela_inicial' %}"
+    </script>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <a href="{% url 'insercoes' %}"><button class="btn_voltar"><i class="fas fa-arrow-left"></i>Voltar</button></a>
+
+    <div class="backgroundLeft">
+        <img src="{% static 'totemapp/images/background-left.svg' %}">
+    </div>
+
+    <div class="container">
+        <div class="logo-container">
+            <img src="{% static 'totemapp/images/thumbnail_logo.png' %}" alt="Logo" class="logo">
+        </div>
+
+        <div class="form-container">
+            <form id="formRegistroCurso" method="post">
+                {% csrf_token %}
+                {{ form.nome.label_tag }} {{ form.nome }} <br>
+                {{ form.carga_horaria.label_tag }} {{ form.carga_horaria }} <br>
+                {{ form.desc.label_tag }} {{ form.desc }} <br>
+                {{ form.programacao.label_tag }} {{ form.programacao }} <br>
+                {{ form.requisitos.label_tag }} {{ form.requisitos }} <br>
+                {{ form.modalidade.label_tag }} {{ form.modalidade }} <br>
+                {{ form.nivel.label_tag }} {{ form.nivel }} <br>
+                {{ form.area.label_tag }} {{ form.area }} <br>
+                {{ form.gratis.label_tag }} {{ form.gratis }} <br>
+
+                <div id="valor-field" style="display:none;">
+                    <label for="valor-mascara">Valor do curso:</label>
+                    <input type="text" id="valor-mascara" placeholder="R$ 0,00" oninput="sincronizarValor()" />
+                    <input type="hidden" id="valor-input" name="valor" />
+                </div>
+
+
+                <div class="button-container">
+                    <button type="submit" class="register-button">Registrar</button>
+                </div>
+            </form>
+        </div>
+
+            {% if curso_inserido %}
+        <div id="modalSucesso" class="modal-sucesso" style="display: block;">
+            <div class="container-modal">
+                <h2>Curso Inserido com Sucesso!</h2>
+                <p>O curso já está disponível para a visualização.</p>
+                <button id="fecharModalSucesso">Fechar</button>
+            </div>
+        </div>
+        {% endif %}
+
+
+            <div class="backgroundRight">
+                <img src="{% static 'totemapp/images/background-right.svg' %}">
+            </div>
+    </div>
+
+<script>
+    window.onload = function() {
+        const modalSucesso = document.getElementById('modalSucesso');
+        const form = document.getElementById('formRegistroCurso');
+        const fecharModalSucesso = document.getElementById('fecharModalSucesso');
+
+        if (modalSucesso) {
+            // Exibe o modal de sucesso com transição
+            modalSucesso.style.opacity = '0';
+            modalSucesso.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                modalSucesso.style.opacity = '1';
+            }, 10);
+        }
+
+        // Verifica se o botão de fechar modal existe
+        if (fecharModalSucesso) {
+            fecharModalSucesso.addEventListener('click', function() {
+                // Anima o fechamento do modal
+                modalSucesso.style.opacity = '0';
+                setTimeout(() => {
+                    modalSucesso.style.display = 'none';
+
+                    // Resetando o formulário após o modal fechar
+                    if (form) {
+                        form.reset();
+                    }
+                }, 500); // Sincronizar com o tempo de transição do modal
+            });
+        }
+    };
+
+
+
+        document.getElementById('gratis-select').addEventListener('change', function() {
+        const valorField = document.getElementById('valor-field');
+        const valorMascara = document.getElementById('valor-mascara');
+
+        if (this.value === "False") {
+            valorField.style.display = 'block';
+        } else {
+            valorField.style.display = 'none';
+            valorMascara.value = "";  // Limpa o valor visual
+            document.getElementById('valor-input').value = "";  // Limpa o valor real
+        }
+    });
+
+    function sincronizarValor() {
+        const valorMascara = document.getElementById('valor-mascara');
+        const valorInput = document.getElementById('valor-input');
+
+        // Extrai o valor numérico e atualiza o campo visual e o campo real
+        const valorSemPrefixo = valorMascara.value.replace(/[^\d]/g, '');  // Apenas números
+        valorMascara.value = "R$ " + valorSemPrefixo;  // Exibe "R$" para o usuário
+        valorInput.value = valorSemPrefixo;  // Envia apenas o número no campo real
+    }
+
+    document.getElementById('formRegistroCurso').addEventListener('submit', function() {
+        const valorInput = document.getElementById('valor-input');
+        const valorMascara = document.getElementById('valor-mascara');
+
+        if (valorMascara.value.startsWith("R$")) {
+            valorInput.value = valorMascara.value.replace(/[^\d]/g, '');
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Inserções</title>
+    <link rel="icon" href="{% static 'totemapp/images/logo.png' %}" type="image/x-icon">
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static 'totemapp/insercoes.css' %}'>
+    <script src="{% static 'totemapp/js/temporizador.js' %}"></script>
+    <script>
+        var urlTelaInterativa = "{% url 'tela_inicial' %}"
+    </script>
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <a href="{% url 'menu_opcoes' %}"><button class="btn_voltar"><i class="fas fa-arrow-left"></i>Voltar</button></a>
+
+    <div class="backgroundLeft">
+        <img src="{% static 'totemapp/images/background-left.svg' %}">
+    </div>
+
+    <div class="container">
+        <div class="logo-container">
+            <img src="{% static 'totemapp/images/thumbnail_logo.png' %}" alt="Logo" class="logo">
+        </div>
+
+        <!-- Modal de Login para Administradores -->
+        {% if mostrar_modal %}
+        <div id="adminModal" class="modal" style="display: block;">
+            <div class="modal-content">
+                <h2>Acesso restrito a administradores</h2>
+                <p>Por favor, faça login para continuar.</p>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" name="username" placeholder="Login" required>
+                    <input type="password" name="password" placeholder="Senha" required>
+                    <button type="submit">Entrar</button>
+                </form>     '
+                {% if messages %}
+                    <div>
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% else %}
+             <div class="containerBotoes">
+                <div class="button-wrapper"><a href="{% url 'registro' %}" style="text-decoration: none">
+                  <button class="btn">
+                    <i class="fas fa-plus-circle"></i>
+                  </button>
+                  <div class="ellipse">Inserir novo Curso</div></a>
+                </div>
+                <div class="button-wrapper"><a href="{% url 'cursos_edicao' %}" style="text-decoration: none">
+                  <button class="btn">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <div class="ellipse">Editar/Excluir Curso</div></a>
+                </div>
+             </div>
+
+        {% endif %}
+
+    <br>
+    <div class="backgroundRight">
+                <img src="{% static 'totemapp/images/background-right.svg' %}">
+            </div>
+    </div>
+</body>
+</html>
