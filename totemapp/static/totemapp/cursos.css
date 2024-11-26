@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
         body {
             margin: 0;
             padding: 0;
@@ -32,7 +32,7 @@
         padding-left: 30px;
         padding-right: 35px;
         font-size: 24px;
-        top: 5%;
+        top: 3%;
         color: #E30613;
         background-color: white;
         font-weight: 600;
@@ -411,7 +411,6 @@
 
         #modal-titulo2 {
             margin-bottom: 10px;
-            font-size: 19px;
 
         }
 
@@ -445,8 +444,8 @@
         /* Botão de fechar */
         .close {
             color: #E30613;
-            font-size: 30px;
-            top: 7px;
+            font-size: 42px;
+            top: 2px;
             right: 13px;
             cursor: pointer;
             position: absolute;
@@ -570,6 +569,7 @@
             text-decoration:none;
             color: #E30613;
             font-weight: 500;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
         }
         .link-selecionado {
             border: 1px solid #E30613;
@@ -579,6 +579,7 @@
             color: white;
             font-weight: 500;
             background-color: #E30613;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
         }
 
         .link:hover {
@@ -586,7 +587,7 @@
             color: white;
         }
 
-    }
+    
 
 
         #flush-collapseOne {
@@ -762,8 +763,8 @@
 
         .modal-interessado .close {
             color: #E30613;
-            font-size: 28px;
-            top: 10px;
+            font-size: 42px;
+            top: 5px;
             right: 25px;
             cursor: pointer;
             position: absolute;
@@ -1076,3 +1077,5 @@
         background-color: #004AAD; /* Cor de fundo do item selecionado */
         color: #FFFFFF; /* Cor do texto do item selecionado */
     }
+
+}
