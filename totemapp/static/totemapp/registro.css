@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 400px) and (max-width: 1024px) {
 
     body {
         margin: 0;
@@ -135,7 +135,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 450px;
+    width: 55vw;
     z-index: -10;
 }
 

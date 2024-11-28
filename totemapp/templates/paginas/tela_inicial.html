@@ -6,9 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tela interativa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="{% static 'totemapp/images/logo.png' %}" type="image/x-icon">
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'totemapp/tela_inicial.css' %}">
+    <link rel="manifest" href="{% static 'totemapp/js/manifest.json' %}">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register("{% static 'totemapp/js/service-worker.js' %}")
+            .then(function(registration) {
+                console.log('Service Worker registrado com sucesso:', registration);
+            })
+            .catch(function(error) {
+                console.log('Falha ao registrar o Service Worker:', error);
+            });
+        }
+    </script>
 </head>
 
 <body class="background">

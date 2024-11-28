@@ -355,7 +355,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form-interessado');
+    const botaoEnviar = document.getElementById('botaoEnviar');
+    const loading = document.getElementById('loading');
 
+    form.addEventListener('submit', function(event) {
+        botaoEnviar.disabled = true; // Desativa o botão de enviar
+        loading.style.display = 'flex'; // Mostra o ícone de carregamento
+    });
+});
 
 
 

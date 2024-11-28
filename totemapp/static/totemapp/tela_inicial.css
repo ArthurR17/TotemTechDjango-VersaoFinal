@@ -5,6 +5,10 @@ body.background {
     overflow: hidden; /* Remove qualquer barra de rolagem */
 }
 
+html {
+    overflow: hidden;
+}
+
 .backgroundLeft {
     position: absolute;
     top: 0;
@@ -111,13 +115,13 @@ a.full-link:active {
 /* Consultas de mídia para responsividade */
 @media (max-width: 768px) {
     .logo {
-        max-width: 300px;
+        max-width: 350px;
     }
 
     h1 {
-        font-size: 20px;
-        padding-bottom: 15px;
-        padding-top: 10px;
+        font-size: 24px;
+        padding-bottom: 10px;
+        padding-top: 5px;
     }
 }
 

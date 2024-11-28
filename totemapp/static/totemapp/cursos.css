@@ -1,10 +1,17 @@
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 400px) and (max-width: 1024px) {
         body {
             margin: 0;
             padding: 0;
             font-family: 'Montserrat', sans-serif;
             transition: all 0.3s ease;
+            overflow-y: scroll; /* Remove o scroll da página */
         }
+
+        body::-webkit-scrollbar {
+            width: 0; /* Oculta a barra de rolagem vertical */
+            background: transparent; /* Opcional: torna a barra de rolagem transparente */
+        }
+        
         /* Estilo para a div que será o fundo */
         .background-image {
             position: fixed;
@@ -57,7 +64,7 @@
     font-size: 20px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 10%;
+    margin-top: 100px;
 }
 
         .opcoes_item {
@@ -196,9 +203,11 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px; /* Espaçamento entre os cartões */
-            padding-left: 120px; /* Espaçamento à esquerda do grid */
+            padding: 0 20px; /* Espaçamento nas laterais */
             margin-top: 5%;
             margin-bottom: 5%;
+            box-sizing: border-box; /* Inclui padding no tamanho total do contêiner */
+            justify-content: center; /* Centraliza os cartões horizontalmente */
         }
 
 
@@ -207,13 +216,20 @@
         border: 2px solid #ccc;
         border-radius: 10px;
         padding: 20px;
-        width: 300px;
+        width: 280px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
         justify-content: space-around;
              word-wrap: break-word;
         overflow-wrap: break-word;
+    }
+
+    @media (max-width: 300px) {
+        .cartoes_container, .cursos_container {
+            grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+            padding: 0 20px; /* Espaçamento maior nas laterais */
+        }
     }
 
     .cartoes2 {
@@ -363,7 +379,7 @@
             align-items: center;
             max-height: 90vh; /* Limita a altura máxima do modal */
             font-family: 'Montserrat', sans-serif;
-            width: 800px;
+            width: 98%;
 
         }
 
@@ -764,8 +780,8 @@
         .modal-interessado .close {
             color: #E30613;
             font-size: 42px;
-            top: 5px;
-            right: 25px;
+            top: -12px;
+            right: 5px;
             cursor: pointer;
             position: absolute;
             background-color: transparent;
@@ -813,7 +829,7 @@
             color: black;
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
-            font-size: 22px;
+            font-size: 3.5vw;
         }
 
         .menu_opcoes button:hover {
@@ -840,7 +856,8 @@
         }
 
         .opcoes_item2 h4 {
-            margin-left: 10px;
+            margin-right: 15px;
+            font-size: 3.5vw;
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
         }
@@ -864,6 +881,7 @@
 
         .dropdown-menu.show {
             height: auto; /* Permite a altura automática */
+            inset: 0px auto auto -10px !important;
         }
 
         /* Adicionando uma classe adicional para definir a altura máxima do dropdown */
@@ -1076,6 +1094,23 @@
     .selected {
         background-color: #004AAD; /* Cor de fundo do item selecionado */
         color: #FFFFFF; /* Cor do texto do item selecionado */
+    }
+
+    #loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    #loading svg {
+        animation: rotate 1s linear infinite;
+    }
+    
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
     }
 
 }

@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 400px) and (max-width: 1024px) {
 
     body {
         margin: 0;
@@ -22,7 +22,7 @@
 
     .logo-container {
         width: 100%;
-        z-index: -100;
+        z-index: -101;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -137,13 +137,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 450px;
+    width: 55vw;
     z-index: -10;
 }
 
     .backgroundRight {
         position: absolute;
-        bottom: -80px;
+        top: 300px;
         right: 0;
         width: 450px;
         z-index: -10;

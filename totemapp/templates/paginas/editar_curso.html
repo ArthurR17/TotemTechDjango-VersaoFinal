@@ -12,6 +12,18 @@
     <script>
         var urlTelaInterativa = "{% url 'tela_inicial' %}"
     </script>
+        <link rel="manifest" href="{% static 'totemapp/js/manifest.json' %}">
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register("{% static 'totemapp/js/service-worker.js' %}")
+                .then(function(registration) {
+                    console.log('Service Worker registrado com sucesso:', registration);
+                })
+                .catch(function(error) {
+                    console.log('Falha ao registrar o Service Worker:', error);
+                });
+            }
+        </script>
 </head>
 <body>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">

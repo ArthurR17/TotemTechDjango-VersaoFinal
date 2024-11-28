@@ -50,7 +50,7 @@ body {
 
 
 .image-container img {
-    margin-top: 105%;
+    margin-top: 580px;  
     max-width: 90vw; /* Largura máxima da imagem responsiva */
     height: auto; /* Mantém a proporção da imagem */
 
@@ -101,7 +101,7 @@ ou seja (-100%) faz com que se mova para a esquerda. */
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
 }
-
+    
 /* Responsividade para dispositivos móveis */
 @media (max-width: 600px) {
     h1 {
@@ -167,7 +167,7 @@ ou seja (-100%) faz com que se mova para a esquerda. */
 
 /* Estilizacão: ícones dentro dos botões */
 .my-button i {
-    font-size: 5vw; /* Tamanho do ícone (responsivo) */
+    font-size: 75px; /* Tamanho do ícone (responsivo) */
 }
 
 
@@ -224,21 +224,3 @@ a {
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Responsividade para telas menores */
-@media (max-width: 600px) {
-    .my-button {
-        width: 80vw; /* Aumenta a largura dos botões em telas menores */
-        height: 10vh; /* Aumenta a altura dos botões em telas menores */
-        font-size: 1.2em; /* Ajusta o tamanho da fonte para telas pequenas */
-    }
-
-
-    .button-title {
-        font-size: 1em; /* Ajusta o tamanho dos títulos em telas pequenas */
-    }
-
-
-    .gallery-container {
-        max-width: 100%;
-    }
-}
