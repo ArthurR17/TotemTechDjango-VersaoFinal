@@ -1,5 +1,5 @@
 /* Responsividade para iPad */
-@media (max-width: 1024px) and (min-width: 400px) {
+@media (max-width: 1020px) and (min-width: 400px) {
     body {
         font-family: 'Montserrat', sans-serif;
         margin: 0;
@@ -60,27 +60,35 @@
 
     #sobre-container {
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 20px;
         gap: 20px;
-        margin: 20px 0;
+        flex-direction: row-reverse;
     }
-/* oi to*/
-    #lado {
-        width: 45%;
-        height: auto;
+    
+    #imagem-principal {
+        width: 40%;
+        max-width: 300px;
         border-radius: 15px;
-        margin-right: 10px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
     }
 
-    #texto {
-        text-align: left;
+    @media (max-width: 600px){
+        #imagem-principal {
+            width: 100%;
+            max-width: 500px;
+        }
+    }
+    
+    #texto-container {
+        flex: 1;
+        min-width: 300px;
+        text-align: justify;
         font-size: 16px;
         line-height: 1.8;
-        margin-left: 3%;
-        width: 50%;
         color: #333;
     }
 
@@ -101,8 +109,9 @@
     /* Textos alinhados à esquerda */
     #b {
         text-align: justify;
-    font-size: 16px;
-    line-height: 1.8;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-left: 3%;
     }
 
     

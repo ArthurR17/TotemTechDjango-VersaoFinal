@@ -12,7 +12,6 @@ self.addEventListener('install', function(event) {
                 'totemapp/css/tela_inicial.css',
                 'totemapp/js/manifest.json',
                 'totemapp/js/service-worker.js',
-                // Adicione outros arquivos que você deseja armazenar em cache
             ]);
         })
     );

@@ -31,9 +31,10 @@ h2 {
     position: relative;
     height: auto;
     padding-bottom: 80px; /* Espaço para o botão fixo na parte inferior */
+    text-align: center;
+    margin-top: 5%;
 }
 
-/* Estilo do botão de voltar */
 .btn_voltar {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -87,8 +88,9 @@ footer {
 #logo {
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    width: 20vh;
+    right: 10px;
+    width: 25vw;
+
 }
 
 /* Estilo da imagem da trilha */
@@ -96,10 +98,10 @@ footer {
     position: relative;
     transition: transform 0.3s ease;
     display: block;
-    max-width: 90%;
+    max-width: 80%;
     height: auto;
     border: none;
-    margin: 20px auto;
+    margin-left: 5%;
     z-index: 1;
     transform-origin: center center;
 }
@@ -185,75 +187,7 @@ footer {
 
 /* CONSULTAS DE MÍDIA PARA RESPONSIVIDADE */
 
-/* Para telas menores que 768px (smartphones e tablets) */
-@media (max-width: 768px) {
-    .container {
-        max-width: 100%; /* O contêiner ocupa toda a largura */
-        padding: 5px; /* Reduz o padding */
-    }
 
-    .btn_voltar {
-        padding: 6px 20px;
-        font-size: 16px; /* Diminui o tamanho do texto */
-        left: 10px;
-    }
-
-    .arrow-up {
-        font-size: 24px; /* Diminui o tamanho da seta */
-    }
-
-    h1 {
-        font-size: 1.5em; /* Ajusta o tamanho do título */
-    }
-
-    #trilha {
-        max-width: 80%; /* Aumenta a largura da imagem da trilha */
-    }
-
-    .btn_sobre {
-        padding: 6px 20px;
-        font-size: 16px; /* Ajusta o tamanho do botão sobre */
-    }
-
-    .zoom-controls {
-        right: 10px; /* Aproxima os botões de zoom da borda */
-    }
-
-    .zoom-controls button {
-        padding: 6px 16px;
-        font-size: 16px; /* Diminui o tamanho do texto dos botões de zoom */
-    }
-}
-
-/* Para telas menores que 480px (smartphones pequenos) */
-@media (max-width: 480px) {
-    .btn_voltar {
-        padding: 5px 15px;
-        font-size: 14px; /* Diminui ainda mais o tamanho do texto */
-    }
-
-    .arrow-up {
-        font-size: 20px; /* Diminui ainda mais a seta */
-    }
-
-    h1 {
-        font-size: 1.2em; /* Ajusta o título para telas pequenas */
-    }
-
-    #logo {
-        width: 15vh; /* Diminui o logo em telas pequenas */
-    }
-
-    .btn_sobre {
-        padding: 5px 15px;
-        font-size: 14px; /* Diminui o tamanho do botão sobre */
-    }
-
-    .zoom-controls button {
-        padding: 5px 12px;
-        font-size: 14px; /* Ajusta os botões de zoom para telas menores */
-    }
-}
 
 .background-image {
     position: fixed;

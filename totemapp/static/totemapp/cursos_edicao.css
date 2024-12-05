@@ -9,7 +9,7 @@
         
         body::-webkit-scrollbar {
             width: 0; /* Oculta a barra de rolagem vertical */
-            background: transparent; /* Opcional: torna a barra de rolagem transparente */
+            background: transparent; 
         }
         
         /* Estilo para a div que será o fundo */
@@ -208,6 +208,7 @@
             margin-bottom: 5%;
             box-sizing: border-box; /* Inclui padding no tamanho total do contêiner */
             justify-content: center; /* Centraliza os cartões horizontalmente */
+            justify-items: center;
         }
 
 
@@ -253,6 +254,7 @@
 
         .categoria {
             margin: 10px 0;
+            width: 500px;
         }
 
         .categoria span {

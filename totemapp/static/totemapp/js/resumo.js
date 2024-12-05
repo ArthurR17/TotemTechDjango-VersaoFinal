@@ -367,7 +367,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Bloqueia o scroll horizontal
+    document.body.style.overflowX = 'hidden';
 
+    // Adiciona um evento de redimensionamento para garantir que o scroll horizontal permaneça bloqueado
+    window.addEventListener('resize', function() {
+        document.body.style.overflowX = 'hidden';
+    });
+});
 
 
 

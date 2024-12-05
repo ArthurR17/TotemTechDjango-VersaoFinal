@@ -120,8 +120,8 @@ def curso_detail(request, curso_id):
             'desc': curso.desc,
             'carga_horaria': curso.carga_horaria,
             'valor': curso.valor,  # Valor padrão se None
-            'requisitos': curso.requisitos.split(','),  # Converte a string em listas
-            'programacao': curso.programacao.split(',')  # Converte a string em array
+            'requisitos': curso.requisitos.split(';'),  # Converte a string em listas
+            'programacao': curso.programacao.split(';')  # Converte a string em array
         }
         return JsonResponse(data)
     except Curso.DoesNotExist:
@@ -269,9 +269,15 @@ def insercoes(request):
                 messages.error(request, 'Login ou senha incorretos.')
 
         # Renderiza a página com o modal de login e o indicador de que nenhum curso foi inserido
-        return render(request, 'paginas/insercoes.html', {
+        response = render(request, 'paginas/insercoes.html', {
             'mostrar_modal': True,  # Exibe o modal de login
         })
+
+    # Limpa as mensagens após renderizar a página
+    storage = messages.get_messages(request)
+    list(storage)  # Converte o storage em uma lista para esvaziá-lo
+
+    return response
 
 
 def editar_curso(request, id):

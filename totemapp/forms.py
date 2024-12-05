@@ -69,6 +69,15 @@ class CursoForm(forms.ModelForm):
             'Design Gráfico, Papel, Celulose, Gráfica e Editorial',
             'Design Gráfico, Papel, Celulose, Gráfica e Editorial'),
         ('Metalurgia e Soldagem', 'Metalurgia e Soldagem'),
+        ('Mecâtronica, Sistemas de Automação, Energia e Eletrônica', 'Mecâtronica, Sistemas de Automação, Energia e Eletrônica'),
+        ('Meio Ambiente, Saúde e Segurança do Trabalho', 'Meio Ambiente, Saúde e Segurança do Trabalho'),
+        ('Automotiva', 'Automotiva'),
+        ('Logística e Transporte', 'Logística e Transporte'),
+        ('Fabricação Mecânica e Mecânica Industrial', 'Fabricação Mecânica e Mecânica Industrial'),
+        ('Design de Moda, Têxtil, Vestuário, Calçados e Joalheria', 'Design de Moda, Têxtil, Vestuário, Calçados e Joalheria'),
+        ('Construção Civil e Design de Mobiliário', 'Construção Civil e Design de Mobiliário'),
+        ('Química, Cerâmica e Plásticos', 'Química, Cerâmica e Plásticos'),
+        ('Refrigeração e Climatização', 'Refrigeração e Climatização'),
     ]
 
     modalidade = forms.ChoiceField(
@@ -96,7 +105,7 @@ class CursoForm(forms.ModelForm):
 
     requisitos = forms.CharField(
         widget=forms.Textarea(attrs={
-            'placeholder': 'Digite os requisitos separados por vírgula',
+            'placeholder': 'Digite os requisitos separados por ponto e vírgula (;)',
             'class': 'text-area'
         }),
         label="Requisitos"
@@ -104,7 +113,7 @@ class CursoForm(forms.ModelForm):
 
     programacao = forms.CharField(
         widget=forms.Textarea(attrs={
-            'placeholder': 'Digite a programação separada por vírgula',
+            'placeholder': 'Digite a programação separada por ponto e vírgula (;)',
             'class': 'text-area'
         }),
         label="Programação"

@@ -4,13 +4,14 @@
             padding: 0;
             font-family: 'Montserrat', sans-serif;
             transition: all 0.3s ease;
-            overflow-y: scroll; /* Remove o scroll da página */
+            
         }
 
-        body::-webkit-scrollbar {
-            width: 0; /* Oculta a barra de rolagem vertical */
-            background: transparent; /* Opcional: torna a barra de rolagem transparente */
+        html, body {
+            overflow-x: hidden;
         }
+
+        
         
         /* Estilo para a div que será o fundo */
         .background-image {
@@ -46,11 +47,13 @@
         font-family: 'Montserrat', sans-serif;
         position: fixed;
 
-        .fas.fa-arrow-left {
+        
+    }
+
+    .fas.fa-arrow-left {
             font-size: 24px;
             margin-right: 10px;
         }
-    }
 .btn_voltar:hover {
     background-color: #C20511;
     color: white;
@@ -207,7 +210,15 @@
             margin-top: 5%;
             margin-bottom: 5%;
             box-sizing: border-box; /* Inclui padding no tamanho total do contêiner */
+            justify-items: center;
             justify-content: center; /* Centraliza os cartões horizontalmente */
+        }
+
+        @media (max-width: 500px){
+            .cartoes_container, .cursos_container {
+                grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+                padding: 0 20px; /* Espaçamento maior nas laterais */
+            }
         }
 
 
@@ -260,6 +271,7 @@
 
         .categoria {
             margin: 10px 0;
+            width: 500px;
         }
 
         .categoria span {
@@ -603,6 +615,7 @@
             color: white;
         }
 
+}
     
 
 
@@ -723,7 +736,7 @@
             padding: 20px;
             border-radius: 20px;
             border: 1px solid #828282;
-            width: 600px;
+            width: 95%;
             max-height: none;
             position: relative;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -881,7 +894,6 @@
 
         .dropdown-menu.show {
             height: auto; /* Permite a altura automática */
-            inset: 0px auto auto -10px !important;
         }
 
         /* Adicionando uma classe adicional para definir a altura máxima do dropdown */
@@ -889,6 +901,15 @@
             height: 200px; /* Defina a altura máxima desejada */
         }
 
+        /* Estilo específico para o dropdown da "Área" */
+        .dropdown-menu.dropdown-area.show {
+            inset: 0px auto auto 10px !important;
+        }
+
+        /* Estilo específico para o dropdown da "Trilha" */
+        .dropdown-menu.dropdown-trilha.show {
+            inset: 0px auto auto -10px !important;
+        }
 
 
         .search-input {
@@ -1112,5 +1133,3 @@
             transform: rotate(360deg);
         }
     }
-
-}

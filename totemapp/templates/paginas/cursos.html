@@ -49,12 +49,23 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-name="area">
                 Área
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-area" style="inset: 0px auto auto 10px !important">
                 <li><a class="dropdown-item" href="#" data-name="area" data-value="Tecnologia da Informação e Informática">Tecnologia da Informação e Informática</a></li>
                 <li><a class="dropdown-item" href="#" data-name="area" data-value="Administração e Gestão">Administração e Gestão</a></li>
                 <li><a class="dropdown-item" href="#" data-name="area" data-value="Alimentos e Bebidas">Alimentos e Bebidas</a></li>
                 <li><a class="dropdown-item" href="#" data-name="area" data-value="Design Gráfico, Papel, Celulose, Gráfica e Editorial">Design Gráfico, Papel, Celulose, Gráfica e Editorial</a></li>
                 <li><a class="dropdown-item" href="#" data-name="area" data-value="Metalurgia e Soldagem">Metalurgia e Soldagem</a></li>
+                <li><a class="dropdown-item" href="#" data-name="area" data-value="Mecâtronica, Sistemas de Automação, Energia e Eletrônica">Mecâtronica, Sistemas de Automação, Energia e Eletrônica</a></li>
+                <li><a class="dropdown-item" href="#" data-name="area" data-value="Meio Ambiente, Saúde e Segurança do Trabalho">Meio Ambiente, Saúde e Segurança do Trabalho</a></li>
+                <li><a class="dropdown-item" href="#" data-name="area" data-value="Automotiva">Automotiva</a></li>
+                <li><a class="dropdown-item" href="#" data-name="area" data-value="Logística e Transporte">Logística e Transporte</a></li>
+                <li><a class="dropdown-item" href="#" data-name="area" data-value="Fabricação Mecânica e Mecânica Industrial">Fabricação Mecânica e Mecânica Industrial</a></li>
+                <li><a class="dropdown-item" href="#" data-name="area" data-value="Design de Moda, Têxtil, Vestuário, Calçados e Joalheria">Design de Moda, Têxtil, Vestuário, Calçados e Joalheria</a></li>
+                <li><a class="dropdown-item" href="#" data-name="area" data-value="Construção Civil e Design de Mobiliário">Construção Civil e Design de Mobiliário</a></li>
+                <li><a class="dropdown-item" href="#" data-name="area" data-value="Química, Cerâmica e Plásticos">Química, Cerâmica e Plásticos</a></li>
+                <li><a class="dropdown-item" href="#" data-name="area" data-value="Refrigeração e Climatização">Refrigeração e Climatização</a></li>
+
+
             </ul>
         </div>
     </div>
@@ -89,7 +100,7 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Trilha
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-trilha" style="inset: 0px auto auto -10px !important">
                 <li><a class="dropdown-item" href="{% url 'trilha_auto' %}">Automobilística</a></li>
                 <li><a class="dropdown-item" href="{% url 'trilha_eletro' %}">Eletroeletrônica</a></li>
                 <li><a class="dropdown-item" href="{% url 'trilha_metal' %}">Metalmecânica</a></li>
@@ -191,6 +202,14 @@
                     {% endfor %}
                     <div id="mensagemErro" style="color: red;"></div> <!-- Mensagens de erro -->
                     <button type="submit" id="botaoEnviar">Enviar</button>
+                    <div id="loading" style="display: none;">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" stroke="black" stroke-width="4" fill="none" />
+                            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="4" fill="none" stroke-dasharray="31.4" stroke-dashoffset="31.4">
+                                <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite" />
+                            </circle>
+                        </svg>
+                    </div>
                 </form>
             </div>
         </div>
@@ -218,7 +237,7 @@
                 <span>{{ curso.modalidade }}</span>
             </div>
             <div class="categoria">
-                <span>{{ curso.area|truncatechars:40 }}</span>
+                <span>{{ curso.area|truncatechars:36 }}</span>
             </div>
             <h2>{{ curso.nome|truncatechars:40 }}</h2>
             <p>{{ curso.desc|truncatechars:110 }}</p>
